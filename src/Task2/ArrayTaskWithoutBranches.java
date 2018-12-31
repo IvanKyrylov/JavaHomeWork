@@ -9,14 +9,14 @@ public class ArrayTaskWithoutBranches {
     public ArrayTaskWithoutBranches() {
         ints = new int[10];
         for (int i = 0; i < ints.length ; i++) {
-            ints[i] = random.nextInt(10);
+            ints[i] = random.nextInt() % 10 ;
         }
     }
 
     public ArrayTaskWithoutBranches(int i) {
         ints = new int[i];
         for (i = 0; i < ints.length ; i++) {
-            ints[i] = random.nextInt(100);
+            ints[i] = random.nextInt() % 10;
         }
     }
 
