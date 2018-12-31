@@ -16,7 +16,7 @@ public class ArrayTaskWithoutBranches {
     public ArrayTaskWithoutBranches(int i) {
         ints = new int[i];
         for (i = 0; i < ints.length ; i++) {
-            ints[i] = random.nextInt() % 10;
+            ints[i] = random.nextInt() % 100;
         }
     }
 
@@ -25,7 +25,7 @@ public class ArrayTaskWithoutBranches {
         for (int i : ints) {
             s += i + "\t";
         }
-        s += "\n" + "Reverse: ";
+        s += "\nReverse: ";
 
         for (int i = ints.length - 1; i >= 0; i--) {
             s += ints[i] + "\t";

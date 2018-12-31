@@ -48,4 +48,17 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
         }
     }
 
+    public void sumEvenElements(){
+        int sum = 0;
+        int counter = 0;
+
+        for (int i : ints) {
+            if (i%2 == 0 && i !=0) {
+                sum += i;
+                counter++;
+            }
+        }
+        System.out.println("Sum Even Element: " + sum + ";\nQuantity: " + counter);
+    }
+
 }
