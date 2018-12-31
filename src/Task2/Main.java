@@ -15,5 +15,7 @@ public class Main {
         arrayTaskWithBranches.max();
         arrayTaskWithBranches.min();
         arrayTaskWithBranches.sumEvenElements();
+        arrayTaskWithBranches.sumEvenElements(20, 30);
+
     }
 }
