@@ -16,7 +16,7 @@ public class ArrayTaskWithoutBranches {
     public ArrayTaskWithoutBranches(int i) {
         ints = new int[i];
         for (i = 0; i < ints.length ; i++) {
-            ints[i] = random.nextInt(10);
+            ints[i] = random.nextInt(100);
         }
     }
 
@@ -39,7 +39,6 @@ public class ArrayTaskWithoutBranches {
         for (int i : ints) {
             sum += i;
         }
-        show();
         System.out.println("Sum: " + sum);
 
     }
