@@ -21,7 +21,9 @@ public class Main {
 //        arrayTaskWithBranches.positiveIncNegativeDecr();
 //        arrayTaskWithBranches.numberMoreAverageArray();
         ArrayKnownLength arrayKnownLength = ArrayKnownLength.objectArrayKnownLength();
-        arrayKnownLength.sumPairedElement();
+//        arrayKnownLength.sumPairedElement();
+//        arrayKnownLength.concatArray();
+        arrayKnownLength.swapMaxMin();
 
     }
 }

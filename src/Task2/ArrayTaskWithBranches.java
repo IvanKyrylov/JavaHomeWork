@@ -4,6 +4,8 @@ package Task2;
 public class ArrayTaskWithBranches extends ArrayTaskWithOutBranches {
     private int[] ints = getInts();
     private int zeroValue = ints[0];
+    private int max;
+    private int min;
 
     public ArrayTaskWithBranches() {
         super();
@@ -24,22 +26,27 @@ public class ArrayTaskWithBranches extends ArrayTaskWithOutBranches {
     }
 
     public void max(){
-        int max = zeroValue;
+        max = zeroValue;
         for (int i: ints) {
             max = Math.max(max, i);
         }
         System.out.println("Max: " + max);
     }
 
-/*
     public int max(int[] ints){
-        Arrays.sort(ints);
-        return ints[ints.length - 1];
+        int max = ints[0];
+        for (int i: ints) {
+            max = Math.max(max, i);
+        }
+        return max;
     }
-*/
+
+    public int getMax() {
+        return max;
+    }
 
     public void min(){
-        int min = zeroValue;
+        min = zeroValue;
         for (int i : ints) {
             min = Math.min(min, i);
         }
@@ -47,12 +54,19 @@ public class ArrayTaskWithBranches extends ArrayTaskWithOutBranches {
         index(min);
     }
 
-/*
     public int min(int[] ints){
-        Arrays.sort(ints);
-        return ints[0];
+        int min = ints[0];
+        for (int i : ints) {
+            min = Math.min(min, i);
+        }
+        System.out.println("Min: " + min);
+        return min;
     }
-*/
+
+
+    public int getMin() {
+        return min;
+    }
 
     public void index(int number){
         int index = 0;
