@@ -1,6 +1,9 @@
 package Task2;
 
+
 public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
+
+    private int zeroValue = ints[0];
 
     public ArrayTaskWithBranches() {
         super();
@@ -21,15 +24,22 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
     }
 
     public void max(){
-        int max = 0;
+        int max = zeroValue;
         for (int i: ints) {
             max = Math.max(max, i);
         }
         System.out.println("Max: " + max);
     }
 
+/*
+    public int max(int[] ints){
+        Arrays.sort(ints);
+        return ints[ints.length - 1];
+    }
+*/
+
     public void min(){
-        int min = 0;
+        int min = zeroValue;
         for (int i : ints) {
             min = Math.min(min, i);
         }
@@ -37,8 +47,15 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
         index(min);
     }
 
+/*
+    public int min(int[] ints){
+        Arrays.sort(ints);
+        return ints[0];
+    }
+*/
+
     public void index(int number){
-        int index = 0;
+        int index = zeroValue;
         for (int i : ints) {
             if (i == number) {
                 System.out.println("Index: " + index);
@@ -65,7 +82,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
         int sum = 0;
         int counter = 0;
         for (int i : ints) {
-            if (i%2 == 0 && i !=0 && i >= start && i <= end) {
+            if ((i%2 == 0 && i !=0) && (i >= start && i <= end)) {
                 sum += i;
                 counter++;
             }
@@ -74,4 +91,18 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
                 " Even Element: " + sum + ";\nQuantity: " + counter);
     }
 
+    public void maximumEvenElementsAndMinimumOdd(){
+        int max = zeroValue;
+        int min = zeroValue;
+        for (int i : ints) {
+            if (i != 0 && (i > max && i%2 == 0)) {
+                max = i;
+            }
+            if (i != 0 && (i < min && i%2 != 0)) {
+                min = i;
+            }
+        }
+        System.out.println("Maximum Event Element: " + max +
+                ";\n" + "Minimum Odd Element: " + min + ";");
+    }
 }
