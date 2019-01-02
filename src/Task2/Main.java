@@ -17,6 +17,7 @@ public class Main {
         arrayTaskWithBranches.sumEvenElements();
         arrayTaskWithBranches.sumEvenElements(20, 30);
         arrayTaskWithBranches.maximumEvenElementsAndMinimumOdd();
+        arrayTaskWithBranches.negativeInversion();
 
     }
 }

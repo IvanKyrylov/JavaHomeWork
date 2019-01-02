@@ -105,4 +105,15 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
         System.out.println("Maximum Event Element: " + max +
                 ";\n" + "Minimum Odd Element: " + min + ";");
     }
+
+    public void negativeInversion(){
+        for (int i = 0; i < ints.length; i++) {
+            if (ints[i] < 0) {
+                ints[i] = Math.abs(ints[i]);
+            }
+        }
+        show();
+    }
+
+
 }
