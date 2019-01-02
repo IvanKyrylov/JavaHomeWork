@@ -3,14 +3,15 @@ package Task2;
 import java.util.Random;
 
 public class ArrayTaskWithoutBranches {
-    int[] ints;
+    private int[] ints;
+    private int sum;
     Random random = new Random();
 
     public ArrayTaskWithoutBranches() {
         ints = new int[10];
         for (int i = 0; i < ints.length ; i++) {
-            ints[i] = random.nextInt() % 100;
-//            ints[i] = random.nextInt(50);
+//            ints[i] = random.nextInt() % 100;
+            ints[i] = random.nextInt(50);
         }
     }
 
@@ -19,6 +20,14 @@ public class ArrayTaskWithoutBranches {
         for (i = 0; i < ints.length ; i++) {
             ints[i] = random.nextInt() % 100;
         }
+    }
+
+    public int[] getInts() {
+        return ints;
+    }
+
+    public int getSum() {
+        return sum;
     }
 
     public void show(){
@@ -36,7 +45,7 @@ public class ArrayTaskWithoutBranches {
     }
 
     public void sum(){
-        int sum = 0;
+        sum = 0;
         for (int i : ints) {
             sum += i;
         }

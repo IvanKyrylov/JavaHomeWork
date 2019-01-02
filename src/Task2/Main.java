@@ -9,7 +9,7 @@ public class Main {
 //        arrayTaskWithoutBranches.sum();
 //        arrayTaskWithoutBranches1.sum();
         ArrayTaskWithBranches arrayTaskWithBranches = new ArrayTaskWithBranches();
-        ArrayTaskWithBranches arrayTaskWithBranches1 = new ArrayTaskWithBranches(20);
+//        ArrayTaskWithBranches arrayTaskWithBranches1 = new ArrayTaskWithBranches(20);
         arrayTaskWithBranches.show();
         arrayTaskWithBranches.sum();
         arrayTaskWithBranches.max();
@@ -18,6 +18,7 @@ public class Main {
         arrayTaskWithBranches.sumEvenElements(20, 30);
         arrayTaskWithBranches.maximumEvenElementsAndMinimumOdd();
         arrayTaskWithBranches.negativeInversion();
-
+        arrayTaskWithBranches.positiveIncNegativeDecr();
+        arrayTaskWithBranches.numberMoreAverageArray();
     }
 }

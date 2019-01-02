@@ -3,7 +3,7 @@ package Task2;
 
 public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
 
-    private int zeroValue = ints[0];
+    private int zeroValue = getInts()[0];
 
     public ArrayTaskWithBranches() {
         super();
@@ -25,7 +25,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
 
     public void max(){
         int max = zeroValue;
-        for (int i: ints) {
+        for (int i: getInts()) {
             max = Math.max(max, i);
         }
         System.out.println("Max: " + max);
@@ -40,7 +40,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
 
     public void min(){
         int min = zeroValue;
-        for (int i : ints) {
+        for (int i : getInts()) {
             min = Math.min(min, i);
         }
         System.out.println("Min: " + min);
@@ -55,8 +55,8 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
 */
 
     public void index(int number){
-        int index = zeroValue;
-        for (int i : ints) {
+        int index = 0;
+        for (int i : getInts()) {
             if (i == number) {
                 System.out.println("Index: " + index);
                 break;
@@ -69,32 +69,32 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
         int sum = 0;
         int counter = 0;
 
-        for (int i : ints) {
+        for (int i : getInts()) {
             if (i%2 == 0 && i !=0) {
                 sum += i;
                 counter++;
             }
         }
-        System.out.println("Sum Even Element: " + sum + ";\nQuantity: " + counter);
+        System.out.println("Sum Even Element: " + sum + ";\n" + "Quantity: " + counter);
     }
 
     public void sumEvenElements(int start, int end){
         int sum = 0;
         int counter = 0;
-        for (int i : ints) {
-            if ((i%2 == 0 && i !=0) && (i >= start && i <= end)) {
+        for (int i : getInts()) {
+            if (i%2 == 0 && i !=0 && i >= start && i <= end) {
                 sum += i;
                 counter++;
             }
         }
         System.out.println("Sum " + start + " to " + end +
-                " Even Element: " + sum + ";\nQuantity: " + counter);
+                " Even Element: " + sum + ";\n" + "Quantity: " + counter);
     }
 
     public void maximumEvenElementsAndMinimumOdd(){
         int max = zeroValue;
         int min = zeroValue;
-        for (int i : ints) {
+        for (int i : getInts()) {
             if (i != 0 && (i > max && i%2 == 0)) {
                 max = i;
             }
@@ -107,7 +107,8 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
     }
 
     public void negativeInversion(){
-        for (int i = 0; i < ints.length; i++) {
+        int[] ints = getInts();
+        for (int i = 0; i < getInts().length; i++) {
             if (ints[i] < 0) {
                 ints[i] = Math.abs(ints[i]);
             }
@@ -115,5 +116,22 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
         show();
     }
 
+    public void positiveIncNegativeDecr(){
+        int[] ints = getInts();
+        for (int i = 0; i < ints.length; i++) {
+            if (ints[i] > 0) ints[i]++;
+            if (ints[i] < 0) ints[i]--;
+        }
+        show();
+    }
 
+    public void numberMoreAverageArray(){
+        double average = (double) getSum() / getInts().length;
+        int counter = 0;
+        for (int i : getInts()) {
+            if (i >= average) counter++;
+        }
+        System.out.println("Array average: " + average + ";\n" +
+                "Values greater than average: " + counter);
+    }
 }
