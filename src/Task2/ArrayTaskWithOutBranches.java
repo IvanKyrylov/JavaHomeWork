@@ -2,20 +2,20 @@ package Task2;
 
 import java.util.Random;
 
-public class ArrayTaskWithoutBranches {
+public class ArrayTaskWithOutBranches {
     private int[] ints;
     private int sum;
     Random random = new Random();
 
-    public ArrayTaskWithoutBranches() {
+    public ArrayTaskWithOutBranches() {
         ints = new int[10];
         for (int i = 0; i < ints.length ; i++) {
-//            ints[i] = random.nextInt() % 100;
-            ints[i] = random.nextInt(50);
+            ints[i] = random.nextInt() % 100;
+//            ints[i] = random.nextInt(50);
         }
     }
 
-    public ArrayTaskWithoutBranches(int i) {
+    public ArrayTaskWithOutBranches(int i) {
         ints = new int[i];
         for (i = 0; i < ints.length ; i++) {
             ints[i] = random.nextInt() % 100;

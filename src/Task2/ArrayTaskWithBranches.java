@@ -1,9 +1,9 @@
 package Task2;
 
 
-public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
-
-    private int zeroValue = getInts()[0];
+public class ArrayTaskWithBranches extends ArrayTaskWithOutBranches {
+    private int[] ints = getInts();
+    private int zeroValue = ints[0];
 
     public ArrayTaskWithBranches() {
         super();
@@ -25,7 +25,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
 
     public void max(){
         int max = zeroValue;
-        for (int i: getInts()) {
+        for (int i: ints) {
             max = Math.max(max, i);
         }
         System.out.println("Max: " + max);
@@ -40,7 +40,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
 
     public void min(){
         int min = zeroValue;
-        for (int i : getInts()) {
+        for (int i : ints) {
             min = Math.min(min, i);
         }
         System.out.println("Min: " + min);
@@ -56,7 +56,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
 
     public void index(int number){
         int index = 0;
-        for (int i : getInts()) {
+        for (int i : ints) {
             if (i == number) {
                 System.out.println("Index: " + index);
                 break;
@@ -69,7 +69,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
         int sum = 0;
         int counter = 0;
 
-        for (int i : getInts()) {
+        for (int i : ints) {
             if (i%2 == 0 && i !=0) {
                 sum += i;
                 counter++;
@@ -81,7 +81,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
     public void sumEvenElements(int start, int end){
         int sum = 0;
         int counter = 0;
-        for (int i : getInts()) {
+        for (int i : ints) {
             if (i%2 == 0 && i !=0 && i >= start && i <= end) {
                 sum += i;
                 counter++;
@@ -94,7 +94,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
     public void maximumEvenElementsAndMinimumOdd(){
         int max = zeroValue;
         int min = zeroValue;
-        for (int i : getInts()) {
+        for (int i : ints) {
             if (i != 0 && (i > max && i%2 == 0)) {
                 max = i;
             }
@@ -107,8 +107,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
     }
 
     public void negativeInversion(){
-        int[] ints = getInts();
-        for (int i = 0; i < getInts().length; i++) {
+                for (int i = 0; i < ints.length; i++) {
             if (ints[i] < 0) {
                 ints[i] = Math.abs(ints[i]);
             }
@@ -117,7 +116,6 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
     }
 
     public void positiveIncNegativeDecr(){
-        int[] ints = getInts();
         for (int i = 0; i < ints.length; i++) {
             if (ints[i] > 0) ints[i]++;
             if (ints[i] < 0) ints[i]--;
@@ -128,7 +126,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithoutBranches {
     public void numberMoreAverageArray(){
         double average = (double) getSum() / getInts().length;
         int counter = 0;
-        for (int i : getInts()) {
+        for (int i : ints) {
             if (i >= average) counter++;
         }
         System.out.println("Array average: " + average + ";\n" +
