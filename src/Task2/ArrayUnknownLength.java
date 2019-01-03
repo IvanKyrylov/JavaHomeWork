@@ -24,4 +24,5 @@ public class ArrayUnknownLength {
         System.out.println(Arrays.toString(firstArray));
         System.out.println(Arrays.toString(secondArray));
     }
+
 }
