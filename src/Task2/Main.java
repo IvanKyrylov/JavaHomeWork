@@ -20,10 +20,12 @@ public class Main {
 //        arrayTaskWithBranches.negativeInversion();
 //        arrayTaskWithBranches.positiveIncNegativeDecr();
 //        arrayTaskWithBranches.numberMoreAverageArray();
-        ArrayKnownLength arrayKnownLength = ArrayKnownLength.objectArrayKnownLength();
+//        ArrayKnownLength arrayKnownLength = ArrayKnownLength.objectArrayKnownLength();
 //        arrayKnownLength.sumPairedElement();
 //        arrayKnownLength.concatArray();
 //        arrayKnownLength.swapMaxMin();
-        arrayKnownLength.deleteMaxAndMin();
+//        arrayKnownLength.deleteMaxAndMin();
+        ArrayUnknownLength arrayUnknownLength = new ArrayUnknownLength();
+        arrayUnknownLength.separationPositiveNegative();
     }
 }

@@ -1,6 +1,5 @@
 package Task2;
 
-
 public class ArrayTaskWithBranches extends ArrayTaskWithOutBranches {
     private int[] ints = getInts();
     private int zeroValue = ints[0];

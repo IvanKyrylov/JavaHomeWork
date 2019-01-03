@@ -1,9 +1,5 @@
 package Task2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class ArrayKnownLength {
     private int[] first, second;
     private int[] mainArray;
@@ -129,5 +125,10 @@ public class ArrayKnownLength {
             }
         }
         System.out.println(s);
+    }
+
+    public int[] getMainArray() {
+        mainArray = concatArray();
+        return mainArray;
     }
 }
