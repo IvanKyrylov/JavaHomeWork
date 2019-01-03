@@ -1,5 +1,9 @@
 package Task2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class ArrayKnownLength {
     private int[] first, second;
     private int[] mainArray;
@@ -113,6 +117,17 @@ public class ArrayKnownLength {
     }
 
     public void deleteMaxAndMin(){
-
+        maxAndMin();
+        System.out.println("Max: " + max + " Index: " + indexMax +
+                "\nMin: " + min + " Index: " + indexMin);
+        String s = "New Array: ";
+        int[] newArray = new int[mainArray.length];
+        for (int i = 0; i < mainArray.length; i++) {
+            if (i != indexMax && i != indexMin) {
+                newArray[i] = mainArray[i];
+                s += newArray[i] + "\t";
+            }
+        }
+        System.out.println(s);
     }
 }

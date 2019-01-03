@@ -23,7 +23,7 @@ public class Main {
         ArrayKnownLength arrayKnownLength = ArrayKnownLength.objectArrayKnownLength();
 //        arrayKnownLength.sumPairedElement();
 //        arrayKnownLength.concatArray();
-        arrayKnownLength.swapMaxMin();
-
+//        arrayKnownLength.swapMaxMin();
+        arrayKnownLength.deleteMaxAndMin();
     }
 }

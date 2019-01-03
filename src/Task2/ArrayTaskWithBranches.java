@@ -33,13 +33,13 @@ public class ArrayTaskWithBranches extends ArrayTaskWithOutBranches {
         System.out.println("Max: " + max);
     }
 
-    public int max(int[] ints){
+/*    public int max(int[] ints){
         int max = ints[0];
         for (int i: ints) {
             max = Math.max(max, i);
         }
         return max;
-    }
+    }*/
 
     public int getMax() {
         return max;
@@ -54,14 +54,14 @@ public class ArrayTaskWithBranches extends ArrayTaskWithOutBranches {
         index(min);
     }
 
-    public int min(int[] ints){
+/*    public int min(int[] ints){
         int min = ints[0];
         for (int i : ints) {
             min = Math.min(min, i);
         }
         System.out.println("Min: " + min);
         return min;
-    }
+    }*/
 
 
     public int getMin() {

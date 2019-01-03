@@ -11,7 +11,7 @@ public class ArrayTaskWithOutBranches {
         ints = new int[10];
         for (int i = 0; i < ints.length ; i++) {
             ints[i] = random.nextInt() % 100;
-//            ints[i] = random.nextInt(50);
+//            ints[i] = random.nextInt(25);
         }
     }
 
