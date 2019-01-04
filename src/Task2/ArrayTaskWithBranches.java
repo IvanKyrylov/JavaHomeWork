@@ -142,7 +142,7 @@ public class ArrayTaskWithBranches extends ArrayTaskWithOutBranches {
         for (int i : ints) {
             if (i >= average) counter++;
         }
-        System.out.println("Array average: " + average + ";\n" +
+        System.out.println("Task4.Array average: " + average + ";\n" +
                 "Values greater than average: " + counter);
     }
 }

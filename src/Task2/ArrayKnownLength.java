@@ -58,12 +58,12 @@ public class ArrayKnownLength {
             s += second[i] + "\t";
         }
         if (mainArray != null) {
-            s += "\nMain Array: ";
+            s += "\nMain Task4.Array: ";
             for (int i : mainArray) {
                 s += i + "\t";
             }
         }else {
-            s += "\nMain Array == NULL";
+            s += "\nMain Task4.Array == NULL";
         }
         System.out.println(s);
     }
@@ -116,7 +116,7 @@ public class ArrayKnownLength {
         maxAndMin();
         System.out.println("Max: " + max + " Index: " + indexMax +
                 "\nMin: " + min + " Index: " + indexMin);
-        String s = "New Array: ";
+        String s = "New Task4.Array: ";
         int[] newArray = new int[mainArray.length];
         for (int i = 0; i < mainArray.length; i++) {
             if (i != indexMax && i != indexMin) {
